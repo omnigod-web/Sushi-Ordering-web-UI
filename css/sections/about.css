@@ -1,0 +1,94 @@
+/* Container for the About Us section */
+.about-us {
+  display: flex; /* Arranges image and content side by side */
+  min-height: 720px; /* Sets minimum height for the section */
+  overflow: hidden; /* Hides overflowing content */
+  /* min-height: 200vh; */
+}
+
+/* Container for the image section */
+.about-us__image {
+  flex: 1; /* Takes up equal space with content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers content */
+
+  background: var(--color-white); /* White background */
+
+  position: relative; /* Needed for absolutely positioned child (button) */
+}
+
+/* Inner div inside the image container */
+.about-us__image div {
+  padding: 32px 64px; /* Inner spacing */
+
+  flex: 1;
+  display: flex;
+  align-items: center; /* Vertically centers image inside */
+
+  background-position: center; /* Centers background image */
+  background-repeat: no-repeat; /* Prevents background repetition */
+  background-size: contain; /* Scales background to fit container */
+}
+
+/* First image container with bottom border and background */
+.about-us__image-sushi3 {
+  border-bottom: 8px solid var(--color-creamson); /* Bottom border */
+  background-image: url("../../assets/about_bg1.png"); /* Background image */
+}
+
+/* Second image container with a different background */
+.about-us__image-sushi2 {
+  background-image: url("../../assets/about_bg2.png"); /* Background image */
+}
+
+/* Image inside the first image container */
+.about-us__image-sushi3 img {
+  width: 225px;
+  height: 200px;
+}
+
+/* Image inside the second image container */
+.about-us__image-sushi2 img {
+  width: 240px;
+  height: 160px;
+}
+
+/* Button inside the image section */
+.about-us__button {
+  position: absolute;
+  right: 0; /* Aligns button to the right */
+
+  padding: 12px 32px;
+  min-height: 64px;
+
+  background: var(--secondary-color); /* Button background color */
+  border-radius: 32px 0 0 32px; /* Rounded left edges */
+  border: 0;
+  outline: 0;
+
+  color: #fff;
+  font-family: var(--plus-jakarta-sans); /* Custom font */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+
+  cursor: pointer; /* Pointer on hover */
+}
+
+
+/* Image/icon inside button */
+.about-us__button img {
+  object-fit: contain; /* Prevents distortion  */
+  margin-left: 32px;   /* Adds space between text and icon */
+}
+
+/* Text/content section of the About Us block */
+.about-us__content {
+  padding: 64px; /* Inner spacing */
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Stacks content vertically */
+}
